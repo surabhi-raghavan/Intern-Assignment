@@ -25,5 +25,14 @@ def createDataStore(accountSummaryHeading=None, profileHeading=None, transaction
         transactionSheet.append(transactionHeading)
         workbook.save(file)
 
+def addValuesToExcel(values, sheetName):
+    # open created workbook
+    workbook = xl.load_workbook(file)
+    # open required worksheet
+    sheet = workbook[sheetName]
+    # append values to worksheet
+    sheet.append(list(values.values()))
+    workbook.save(file)
+
 if __name__ == '__main__':
     createDataStore(accountSummaryHeading, profileHeading, transactionHeading)
