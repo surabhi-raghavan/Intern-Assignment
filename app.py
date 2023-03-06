@@ -7,7 +7,7 @@ import file
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-file = 'DataStore.xlsx'
+#files = 'DataStore.xlsx'
 
 accountSummaryHeading = ['Account Number', 'Account Type', 'Bank Name', 'IFSC', 'Status']
 profileHeading = ['Name', 'Date of Birth', 'Mobile', 'Address', 'Email', 'PAN']
